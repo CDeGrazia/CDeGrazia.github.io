@@ -1,0 +1,291 @@
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Colin DeGrazia</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="assets/css/main.css" />
+		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
+
+
+	</head>
+	<body class="is-preload">
+
+		<!-- Wrapper-->
+			<div id="wrapper">
+
+				<!-- Nav -->
+					<nav id="nav">
+						<a href="#" class="icon solid fa-home"><span>Home</span></a>
+						<a href="#About" class="icon solid fa-folder"><span>About Me</span></a>
+						<a href="#program_one" class="icon solid fa-cog" ><span>Program 1</span></a>
+						<a href="#program_two" class="icon solid fa-cogs" ><span>Program 2</span></a>
+						<a href="#program_three" class="icon solid fa-calculator" ><span>Program 3</span></a>
+						<a href="#contact" class="icon solid fa-envelope"><span>Contact</span></a>
+						<a href="https://github.com/CDeGrazia" class="icon brands fa-github"><span>Github</span></a>
+						<a href="https://www.facebook.com/colin.degrazia" class="icon brands fa-facebook"><span>fa-facebook</span></a>
+
+					</nav>
+
+				<!-- Main -->
+					<div id="main">
+
+						<!-- Me -->
+							<article id="home" class="panel intro">
+								<header>
+									<h1>Colin DeGrazia</h1>
+									<p>Entry level programmer and technical support</p>
+								</header>
+								<a href="#About" class="jumplink pic">
+								<span id="arrow" class="arrow icon solid fa-chevron-right"><span>See my work</span></span>
+
+									
+									<img src="images\me_webiste_resume.jpeg" alt="images\me_webiste_resume.jpeg" />
+								</a>
+							</article>
+
+							
+
+						<!-- About me -->
+							<article id="About" class="panel">
+								<header>
+									<h2>About me, Experience</h2>
+								</header>
+								<p>
+									I am a hard-working individual who thrives on challenges and has a passion for learning and implementing new skills. I have experience working both independently and as part of a team, and I believe that my adaptability and versatility make me an excellent fit for the tech industry. I am willing to put in the extra effort to complete tasks to the best of my ability and am always eager to take on new projects and responsibilities.
+									 My strong work ethic and self-motivation allow me to not only meet but exceed expectations. I am excited to bring my skills and enthusiasm to any team, and I am confident that I will thrive in a fast-paced and constantly evolving tech environment.
+								</p>
+								<h1>Resume</h1>
+								<p></p>
+							</header>
+							<iframe src="Resume 11-30-2022.pdf" width="100%" height="500"></iframe>
+							 <p>I am excited about the opportunity to work with experienced individuals in the tech industry, as I have a passion for learning from others. I am eager to expand my knowledge, and I believe that working alongside experienced professionals will provide me with valuable insights and guidance. Furthermore, I have a deep love for technology and am constantly seeking out new ways to stay up-to-date with the latest advancements. I enjoy collaborating with others,
+								 and working together to overcome challenges Overall, I am excited to contribute my skills, learn from my colleagues, and work together towards success in the industry.</p>
+
+
+								</section>
+							</article>
+
+
+
+					
+
+
+						<!-- Programming 1 -->
+						<article id="program_one" class="panel">
+<header>
+	Tic Tac Toe
+</header>
+					<b>
+						<!DOCTYPE html>
+						<html>
+						<head>
+						  <title>Tic Tac Toe Board</title>
+						  <style>
+							/* Styling for the board */
+							#board {
+							  display: grid;
+							  grid-template-columns: repeat(3, 1fr);
+							  grid-template-rows: repeat(3, 1fr);
+							  grid-gap: 10px;
+							  width: 300px;
+							  height: 300px;
+							  margin: 0 auto;
+							  border: 2px solid black;
+							}
+						
+							/* Styling for the cells */
+							.cell {
+							  display: flex;
+							  justify-content: center;
+							  align-items: center;
+							  font-size: 50px;
+							  font-weight: bold;
+							  cursor: pointer;
+							  background-color: rgb(33, 146, 161);
+							}
+						
+							/* Styling for X's */
+							.x {
+							  color: red;
+							}
+						
+							/* Styling for O's */
+							.o {
+							  color: blue;
+							}
+						  </style>
+						</head>
+						<body>
+						  <div id="board">
+							<div class="cell"></div>
+							<div class="cell"></div>
+							<div class="cell"></div>
+							<div class="cell"></div>
+							<div class="cell"></div>
+							<div class="cell"></div>
+							<div class="cell"></div>
+							<div class="cell"></div>
+							<div class="cell"></div>
+						  </div>
+						</body>
+						</html>
+						<script src="tttscript.js"></script>
+				
+
+					</b>	
+</article><section></section>
+						</article>
+
+
+						  
+						  <article id="program_two" class="panel">
+							<header>
+							  Random Password Generator
+							</header>
+							<div id="password-generator">
+							  <form>
+								<label for="length">Password Length:</label>
+								<input type="number" id="length" name="length" min="6" max="20" value="8"><br>
+								<label for="complexity">Password Complexity:</label>
+								<select id="complexity" name="complexity">
+								  <option value="simple">Simple</option>
+								  <option value="medium">Medium</option>
+								  <option value="complex">Complex</option>
+								</select><br>
+								<button type="button" onclick="generatePassword()">Generate Password</button>
+							  </form>
+							  <p id="password"></p>
+							</div>
+							<script>
+							  function generatePassword() {
+								// Get user input values
+								const length = document.getElementById("length").value;
+								const complexity = document.getElementById("complexity").value;
+								
+								// Generate password
+								let password = "";
+								const lowercaseChars = "abcdefghijklmnopqrstuvwxyz";
+								const uppercaseChars = "ABCDEFGHIJKLMNOPQRSTUVWXYZ";
+								const numericChars = "0123456789";
+								const specialChars = "!@#$%^&*()_+-=";
+								
+								const allChars = {
+								  simple: lowercaseChars + uppercaseChars,
+								  medium: lowercaseChars + uppercaseChars + numericChars,
+								  complex: lowercaseChars + uppercaseChars + numericChars + specialChars
+								};
+								
+								const allowedChars = allChars[complexity];
+								
+								for (let i = 0; i < length; i++) {
+								  const randomIndex = Math.floor(Math.random() * allowedChars.length);
+								  password += allowedChars.charAt(randomIndex);
+								}
+								
+								// Display password
+								document.getElementById("password").textContent = password;
+							  }
+							</script>
+						  </article>
+						  <!--Program 3-->
+						  <article id="program_three" class="panel">
+							
+								<header>Calculator</header>
+								<div>
+								  <input type="text" id="calculator-screen" disabled>
+								  <br>
+								  <button onclick="addToScreen(7)">7</button>
+								  <button onclick="addToScreen(8)">8</button>
+								  <button onclick="addToScreen(9)">9</button>
+								  <button onclick="addToScreen('/')">/</button>
+								  <br>
+								  <button onclick="addToScreen(4)">4</button>
+								  <button onclick="addToScreen(5)">5</button>
+								  <button onclick="addToScreen(6)">6</button>
+								  <button onclick="addToScreen('*')">*</button>
+								  <br>
+								  <button onclick="addToScreen(1)">1</button>
+								  <button onclick="addToScreen(2)">2</button>
+								  <button onclick="addToScreen(3)">3</button>
+								  <button onclick="addToScreen('-')">-</button>
+								  <br>
+								  <button onclick="addToScreen(0)">0</button>
+								  <button onclick="addToScreen('.')">.</button>
+								  <button onclick="calculate()">=</button>
+								  <button onclick="addToScreen('+')">+</button>
+								  <br>
+								  <button onclick="clearScreen()">Clear</button>
+								</div>
+								<script>
+								  let screen = document.getElementById("calculator-screen");
+								  function addToScreen(value) {
+									screen.value += value;
+								  }
+								  function calculate() {
+									let result = eval(screen.value);
+									screen.value = result;
+								  }
+								  function clearScreen() {
+									screen.value = "";
+								  }
+								</script>
+							  </article>
+							  
+					
+						  
+
+						<!-- Contact -->
+							<article id="contact" class="panel">
+								<header>
+									<h2>Contact Me</h2>
+								</header>
+								<form action="https://formsubmit.co/colindegrazia@gmail.com" method="POST">
+									<label for="name">Name:</label>
+  <input type="text" name="name" id="name">
+
+  <label for="email">Email:</label>
+  <input type="email" name="email" id="email">
+
+  <label for="message">Message:</label>
+  <textarea name="message" id="message"></textarea>
+
+  <button type="submit">Send</button>
+							   </form> 
+
+					</div>
+
+				<!-- Footer -->
+				<footer id="footer">
+					<section>
+			
+					<section class="split contact">
+						<section class="alt">
+							<h3>Address</h3>
+							<p> Lochnavar Pkwy<br />
+								Pittsford, NY 14534</p>
+							
+						</section> 
+						<section>
+							<h3>Phone</h3>
+							<p>(585) 355-9182</a></p>
+						</section>
+						<section>
+							<h3>Email</h3>
+							<p><a href="mailto:colindegrazia@gmail.com">colindegrazia@gmail.com</a></p>
+						</section>
+
+		<!-- Scripts -->
+			<script src="assets/js/jquery.min.js"></script>
+			<script src="assets/js/browser.min.js"></script>
+			<script src="assets/js/breakpoints.min.js"></script>
+			<script src="assets/js/util.js"></script>
+			<script src="assets/js/main.js"></script>
+			<script src="tttscript.js"></script>
+
+
+
+
+	</body>
+</html>
